@@ -6,6 +6,7 @@ import Login from './pages/login/Login'
 import TakeTurn from './pages/takeTurn/TakeTurn'
 import FinalMessageForm from './pages/finalMessageForm/FinalMessageForm'
 import AdminControl from './pages/AdminControl/AdminControl'
+import AdminConfig from './pages/AdminConfig/AdminConfig'
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path="/take-turn" element={<TakeTurn/>}/>
         <Route path="/final-message" element={<FinalMessageForm/> }/>
         <Route path="/admin" element={<AdminControl/>}/>
+        <Route path="/adminConfig" element={<AdminConfig/>}/>
       </Routes>
     </div>
   )

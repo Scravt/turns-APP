@@ -8,3 +8,12 @@ export const getAppointmentConfig = async () => {
         console.error(error)
     }
 }
+
+export const updateAppointmentConfig = async (data) => {
+    try {
+        const response = await conn.put('/appointments-config', data)
+        return response.data
+    } catch (error) {
+        console.error(error)
+    }
+}
