@@ -11,8 +11,6 @@ const Step1 = () => {
             <InputField text='Apellido' placeholder='Apellido' name='apellido' value={values.apellido} handleChange={handleChange} handleBlur={handleBlur} touched={touched.apellido} errors={errors.apellido} />
             <InputField text='D.N.I' placeholder='D.N.I' name='dni' value={values.dni} handleChange={handleChange} handleBlur={handleBlur} touched={touched.dni} errors={errors.dni} />
             <InputField text='Email' placeholder='Email' name='email' value={values.email} handleChange={handleChange} handleBlur={handleBlur} touched={touched.email} errors={errors.email} />
-
-
         </div>
     );
 };

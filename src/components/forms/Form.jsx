@@ -89,22 +89,33 @@ const MultiStepForm = () => {
             onSubmit={handleSubmit}
         >
             {({ values, validateForm, errors, setTouched }) => (
-                <Form className="w-1/2 h-[500px] flex flex-col gap-4 border p-4 rounded-md">
+                <Form className="min-w-1/3 min-h-[450px] flex flex-col justify-between  gap-6 border p-10 rounded-2xl ">
                     {step === 1 && <Step1 />}
                     {step === 2 && <Step2 />}
                     {step === 3 && <Step3 />}
 
                     <div className="flex justify-between">
-                        {step > 1 && <button type="button" onClick={prevStep}>Atrás</button>}
+                        {step > 1 && 
+                        <button type="button"
+                        className='rounded-xl p-2 text-base text-center mb-6 bg-green-800 hover:bg-green-500 font-semibold'
+                        onClick={prevStep}>
+                            Atrás
+                        </button>}
+
                         {step < 3 ? (
                             <button 
+                                className='rounded-xl p-2 text-base text-center mb-6 bg-green-800 hover:bg-green-500 font-semibold'
                                 type="button" 
                                 onClick={() => nextStep(validateForm, errors, setTouched)}
                             >
                                 Siguiente
                             </button>
                         ) : (
-                            <button type="submit">Enviar</button>
+                            <button 
+                            className='className='rounded-xl p-2 text-base text-center mb-6 bg-green-800 hover:bg-green-500 font-semibold
+                            type="submit">
+                                Enviar
+                            </button>
                         )}
                     </div>
                 </Form>

@@ -14,20 +14,21 @@ const AdminConfig = () => {
     }, [])
 
     const handleSubmit = async (e) => {
-        Console.log(e)
+        console.log(e)
         e.preventDefault()
 
-        const minWaintingDays = e.target.minWaintingDays.value
+        const minWaitingDays = e.target.minWaintingDays.value;
+
 
         // Obtener los días seleccionados
         const daysOfWeek = Array.from(e.target.daysOfWeek)
             .filter((checkbox) => checkbox.checked)
             .map((checkbox) => checkbox.value)
 
-        const data = {
-            minWaintingDays,
-            daysOfWeek,
-        }
+            const data = {
+                minWaitingDays,  // Nombre correcto
+                datesAvailability: daysOfWeek.map(Number),  // Probablemente debería llamarse datesAvailability
+            };
 
         const response = await updateAppointmentConfig(data)
         console.log(response)
