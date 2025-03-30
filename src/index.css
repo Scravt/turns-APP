@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+
+.loginBg{
+    background-image: url('/images/Background\ Login.svg');
+    background-size: cover;
+  
+  }
+  .circulos{
+  background-size: cover;
+  }

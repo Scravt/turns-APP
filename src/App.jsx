@@ -12,7 +12,7 @@ function App() {
   
 
   return (
-    <div className="h-full w-full  flex items-center justify-center bg-black text-white">
+    <div >
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
