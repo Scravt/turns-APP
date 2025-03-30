@@ -1,9 +1,12 @@
+import BannerGob from '../../components/BannerGob/BannerGob'
 import Form from '../../components/forms/Form'
 
 const TakeTurn = () => {
   return (
-    
-      <Form/>
+    <>
+      <BannerGob />
+      <Form />
+    </>
   )
 }
 
