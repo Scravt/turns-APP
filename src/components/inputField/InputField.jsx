@@ -15,7 +15,7 @@ const InputField = ({ text, placeholder, name, value, handleChange, handleBlur, 
         onBlur={handleBlur}
         placeholder={placeholder}
       />
-      {touched && errors ? <div>{errors}</div> : null}
+      {touched && errors ? <div className='text-red-500' >{errors}</div> : null}
 
     </div>
   )

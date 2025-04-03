@@ -1,11 +1,27 @@
 @import "tailwindcss";
 
-
-.loginBg{
-    background-image: url('/images/Background\ Login.svg');
+.loginBg {
+    background-image: url('/images/Background Login.svg');
     background-size: cover;
-  
-  }
-  .circulos{
-  background-size: cover;
-  }
+}
+
+.circulos {
+    background-size: cover;
+}
+
+@theme {
+    --color-primary: oklch(0.72 0.11 100); /* Define el color correctamente */
+    --color-secondary: oklch(0.65 0.20 110);
+    --color-tertiary: oklch(0.75 0.15 120);
+    --color-highlight: oklch(0.8 0.2 140);
+    --color-lightGrey: oklch(0.96 0.01 90);
+    --color-darkGrey: oklch(0.15 0.01 80);
+
+    --font-inter: Inter, sans-serif;
+    --font-alex: Alexandria, sans-serif;
+
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 976px;
+    --breakpoint-xl: 1440px;
+}

@@ -6,7 +6,7 @@ import { updateAppointment } from '../../api/services/appointment';
 const AsigProf = ({ turno }) => {
   const [user, setUser] = React.useState(null);
   const [professionals, setProfessionals] = React.useState([]);
-  
+
   React.useEffect(() => {
     const fetchData = async () => {
       const dataUser = await getUser(turno.user_id);
@@ -23,15 +23,15 @@ const AsigProf = ({ turno }) => {
   const handleClick = async () => {
     const professional_id = document.getElementById('professional').value;
     const newdata = {
-        "user_id": user.id,
-        "professional_id": professional_id,
-        "date": turno.date,
+      "user_id": user.id,
+      "professional_id": professional_id,
+      "date": turno.date,
     }
-    
-    const newAppointment = await updateAppointment(turno.id, newdata); 
+
+    const newAppointment = await updateAppointment(turno.id, newdata);
 
     console.log(newAppointment);
-    
+
   };
 
   return (
@@ -51,7 +51,11 @@ const AsigProf = ({ turno }) => {
             </option>
           ))}
         </select>
-        <button onClick={handleClick}>Asignar</button>
+        <button
+          className="bg-green-600 w-1/3 rounded-lg text-white text-xs py-2 font-medium mb-3"
+          onClick={handleClick}>
+          Asignar
+        </button>
       </div>
     </div>
   );

@@ -1,35 +1,20 @@
 import React, { useState } from 'react';
-import AsigProf from '../AsigProf/AsigProf';    
-
+import AsigProf from '../AsigProf/AsigProf';
+import ItemTurn from '../common/ItemTurn';
 const AppointmentsToApprove = ({ turnos }) => {
-  const [turnoSeleccionado, setTurnoSeleccionado] = useState(null); // Estado para manejar el turno seleccionado
-
-  const turnsPendig = turnos?.filter((turno) => turno.professional_id === 1);
-  console.log(turnos);
-
-  const handleAsignarClick = (turno) => {
-    setTurnoSeleccionado(turno); // Establece el turno seleccionado
-  };
+  const turnsPending = turnos?.filter((turno) => turno.professional_id === 1);
 
   return (
-    <div>
-      <h1 className="p-4">Turnos para aprobar</h1>
-      <ul className="flex flex-col gap-2">
-        {turnsPendig.map((turno) => (
-          <li key={turno.id} className="flex gap-2">
-            <p>{turno.user_id}</p>
-            <p>{turno.professional_id}</p>
-            <p>{turno.processType}</p>
-            <p>{turno.date}</p>
-            <button onClick={() => handleAsignarClick(turno)}>Asignar profesional</button>
-          </li>
+    <div className="pl-12 flex flex-col justify-center ">
+      <h2 className="p-4">TURNOS PARA APROBAR</h2>
+      <ul className="flex flex-col ">
+        {turnsPending.map((turno, index) => (
+          <ItemTurn key={index} turno={turno} />
         ))}
       </ul>
-
-      {/* Si hay un turno seleccionado, muestra el componente AsigProf */}
-      {turnoSeleccionado && <AsigProf turno={turnoSeleccionado} />}
     </div>
   );
 };
 
 export default AppointmentsToApprove;
+
