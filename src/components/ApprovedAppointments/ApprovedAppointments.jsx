@@ -1,4 +1,3 @@
-import React from 'react'
 import ItemTurn from '../common/ItemTurn'
 
 const ApprovedAppointments = ({turnos}) => {

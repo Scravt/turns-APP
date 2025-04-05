@@ -8,7 +8,7 @@ const AppointmentsToApprove = ({ turnos }) => {
     <div className="pl-12 flex flex-col justify-center ">
       <h2 className="p-4">TURNOS PARA APROBAR</h2>
       <ul className="flex flex-col ">
-        {turnsPending.map((turno, index) => (
+        {turnsPending?.map((turno, index) => (
           <ItemTurn key={index} turno={turno} />
         ))}
       </ul>
